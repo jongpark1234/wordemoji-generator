@@ -81,4 +81,9 @@ def process(words: list[str]) -> str:
     파일명의 중복을 피하기 위해 현재 사용되고 있는 로마자 표기법과 다른 부분이 존재합니다."""
 
     initial, neutral, final = words
-    return initialMatch[initial] + neutralMatch[neutral] + finalMatch[final]
+    ret = initialMatch[initial] + neutralMatch[neutral] + finalMatch[final]
+
+    if len(ret) == 1:
+        ret += ret
+
+    return ret
