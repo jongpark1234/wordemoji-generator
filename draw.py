@@ -1,7 +1,7 @@
 import os
 from PIL import Image, ImageFont, ImageDraw
 
-def process(word: str, filename: str, fontsize: int=48, indent: int=25) -> None:
+def process(word: str, filename: str, fontsize: int=72, indent: int=15) -> None:
     """background에 글자를 적어 results 폴더 내에 저장합니다.
     
     results 폴더가 존재하지 않을 시 경로를 만들어 저장합니다.
